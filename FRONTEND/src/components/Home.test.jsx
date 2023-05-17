@@ -1,38 +1,12 @@
 import { expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-// import configureStore from "redux-mock-store";
-import thunk from "redux-thunk";
-import { applyMiddleware } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
 
-import { prettyDOM } from "@testing-library/dom";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 
 import Home from "./Home";
-import AddTask from "./AddTask";
-import { TaskReducer } from "../redux/Tasks";
-
-// // const mockStore = configureStore([]);
-// const mockStore = configureStore(TaskReducer, applyMiddleware(thunk));
 
 describe("Home", () => {
-  // const mockTasks = [
-  //   { id: 1, description: "Task 1", done: 0, date: new Date().getDate() },
-  //   { id: 2, description: "Task 2", done: 0, date: new Date().getDate() },
-  // ];
-  // let store;
-
-  // beforeEach(() => {
-  //   store = mockStore({
-  //     tasks: {
-  //       tasks: [
-  //         { id: 1, description: "Task 1", done: 0, date: new Date().getDate() },
-  //         { id: 2, description: "Task 2", done: 0, date: new Date().getDate() },
-  //       ],
-  //     },
-  //   });
-  // });
 
   test("should work as expected", () => {
     render(
@@ -79,24 +53,5 @@ describe("Home", () => {
         <Home />
       </Provider>
     );
-    // const button = screen.getByText(/EDIT/i);
-    // fireEvent.click(button);
-    // expect(button).toBeDefined();
   });
 });
-
-// const linkElement =;
-// console.log("---");
-// console.log(
-//   "component: ",
-//   prettyDOM(component.container.querySelector("li"))
-// );
-// console.log("---");
-
-// component.container.querySelector('li')
-
-// const el = component.getByText('To Do List App')
-// expect(el).toBeDefined()
-// expect(screen.queryByText("content")).toBeDefined();
-// expect(prettyDOM(component.container.querySelector('h1'))).toThrow('To Do List App');
-// expect(component.container).toHaveTextContent('To Do List App')
