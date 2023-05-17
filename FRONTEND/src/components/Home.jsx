@@ -1,9 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-//react icons
-// import {AiOutlinePlus} from 'react-icons/ai'
-// import {MdDelete} from 'react-icons/md'
-
 //add task modal
 import AddTask from "./AddTask";
 import EditTask from "./EditTask";
@@ -53,7 +49,7 @@ function Home() {
           <div className="w-8 h-8 bg-white text-black rounded-full flex justify-center items-center">
             <button onClick={() => setAddTaskModal(true)}>
               +
-              {/* <AiOutlinePlus onClick={()=> setAddTaskModal(true)} size={"1rem"}/> */}
+           
             </button>
           </div>
         </div>
@@ -62,10 +58,6 @@ function Home() {
           <ul className="space-y-4">
             {tasks &&
               tasks.map((task, idx) => {
-                // checkHandle(task.done === 1 ? true : false)
-                // console.log('//////');
-                // console.log('checked', checked);
-                // console.log( task.done === 1 ? true : false);
                 const check = checked === (task.done === 1 ? true : false);
                 return (
                   <div key={idx} className="bg-gray-100 flex justify-between">
@@ -88,7 +80,6 @@ function Home() {
                       }}
                       className="ml-12"
                     >
-                      {/* <MdDelete size={"1.5rem"}/> */}
                       EDIT
                     </button>
 
@@ -98,7 +89,6 @@ function Home() {
                       }}
                       className="mr-3"
                     >
-                      {/* <MdDelete size={"1.5rem"}/> */}X
                     </button>
                   </div>
                 );
