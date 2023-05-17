@@ -1,7 +1,4 @@
 import React, { useRef, useState } from "react";
-//react icons
-// import {AiOutlineCloseCircle} from 'react-icons/ai'
-// import {IoAddCircleOutline} from 'react-icons/io5'
 
 //redux
 import { useDispatch } from "react-redux";
@@ -21,12 +18,10 @@ const AddTask = ({ setAddTaskModal }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    // const title = titleRef.current.value;
     const description = descriptioneRef.current.value;
     let done = doneRef.current.checked;
     const date = new Date().getDate();
 
-    // TODO: ENVIAR TOAST CUANDO PASA LO DE ABAJO
     done = done? 1: 0
     if (description === "") return;
     dispatch(addTask({
@@ -45,18 +40,12 @@ const AddTask = ({ setAddTaskModal }) => {
           <div className="flex justify-between">
             <h1 className="text-xl font-semibold">Add New Task</h1>
             <button onClick={() => closeHandle()}>
-              X{/* <AiOutlineCloseCircle /> */}
+              X
             </button>
           </div>
 
           <form onSubmit={onSubmit} className="">
-            {/* <input
-              type="text"
-              placeholder="Title"
-              className="w-full outline-0 p-2 bg-gray-100"
-              autoFocus
-              ref={titleRef}
-            /> */}
+
             <input
               type="checkbox"
               name=""
