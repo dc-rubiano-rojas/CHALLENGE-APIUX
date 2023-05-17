@@ -9,7 +9,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/:id" element={<EditTask />}></Route>
         </Routes>
       </BrowserRouter>
   );
