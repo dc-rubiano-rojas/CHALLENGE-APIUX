@@ -88,7 +88,7 @@ function Home() {
                         removeHandle(task.id);
                       }}
                       className="mr-3"
-                    >
+                    >X
                     </button>
                   </div>
                 );
