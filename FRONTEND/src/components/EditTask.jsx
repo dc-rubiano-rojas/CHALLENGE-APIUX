@@ -1,14 +1,9 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 
-//react icons
-// import {AiOutlineCloseCircle} from 'react-icons/ai'
-// import {IoAddCircleOutline} from 'react-icons/io5'
-
 import { updateTask } from "../redux/Tasks";
 
 const EditTask = ({ setEditTaskModal, taskToEdit }) => {
-  // console.log('taskToEdit: ', taskToEdit);
   const descriptioneRef = useRef();
   const dispatch = useDispatch();
 
@@ -21,7 +16,6 @@ const EditTask = ({ setEditTaskModal, taskToEdit }) => {
 
     const description = descriptioneRef.current.value;
 
-    // TODO: ENVIAR TOAST CUANDO PASA LO DE ABAJO
     if (description === "") return;
 
     dispatch(
@@ -43,18 +37,12 @@ const EditTask = ({ setEditTaskModal, taskToEdit }) => {
           <div className="flex justify-between">
             <h1 className="text-xl font-semibold">Edit Task</h1>
             <button onClick={() => closeHandle()}>
-              X{/* <AiOutlineCloseCircle /> */}
+              X
             </button>
           </div>
 
           <form onSubmit={onSubmit} className="">
-            {/* <input
-              type="text"
-              placeholder="Title"
-              className="w-full outline-0 p-2 bg-gray-100"
-              autoFocus
-              ref={titleRef}
-            /> */}
+
             <input
               type="text"
               placeholder={taskToEdit.description}
